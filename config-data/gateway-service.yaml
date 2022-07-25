@@ -16,13 +16,9 @@ spring:
           enabled: true
       routes:
         - id: user-service
-          uri: lb://user-service/
+          uri: http://localhost:8001
           predicates:
             - Path=/auth/**
-        - id: news-service
-          uri: lb://news-service/
-          predicates:
-            - Path=/bulletins/**
       globalcors:
         cors-configurations:
           '[/**]':
