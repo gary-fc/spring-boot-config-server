@@ -1,0 +1,24 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/auth_dev'
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+jwt:
+  secret: techgeeknext
+app:
+  jwt-secret: JWTSecretKey
+  jwt-expiration-millisecond: '604800000'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://localhost:8084/eureka/'
