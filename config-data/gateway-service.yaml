@@ -19,3 +19,7 @@ spring:
           uri: lb://news-service
           predicates:
             - Path=/api/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/api/**
