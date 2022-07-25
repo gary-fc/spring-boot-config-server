@@ -20,6 +20,6 @@ spring:
           predicates:
             - Path=/api/**
         - id: news-service
-            uri: lb://news-service
-            predicates:
-              - Path=/api/**
+          uri: lb://news-service
+          predicates:
+            - Path=/api/**
