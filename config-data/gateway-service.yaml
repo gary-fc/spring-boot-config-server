@@ -11,15 +11,6 @@ eureka:
 spring:
   cloud:
     gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:4200"
-            allowedHeaders:
-              - Content-Type
-            allowedMethods:
-              - GET
-              - POST
       discovery:
         locator:
           enabled: true
@@ -32,3 +23,9 @@ spring:
           uri: lb://news-service/
           predicates:
             - Path=/bulletins/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
