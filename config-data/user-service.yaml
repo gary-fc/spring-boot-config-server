@@ -20,5 +20,9 @@ app:
   jwt-expiration-millisecond: '604800000'
 eureka:
   client:
-    serviceUrl:
-      defaultZone: 'http://localhost:8084/eureka/'
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
