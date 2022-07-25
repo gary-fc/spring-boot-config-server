@@ -14,7 +14,9 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "http://localhost:4200/"
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders:
+              - Content-Type
             allowedMethods:
               - GET
               - POST
@@ -25,4 +27,8 @@ spring:
         - id: user-service
           uri: lb://user-service/
           predicates:
-            - Path=/api/**
+            - Path=/auth/**
+        - id: news-service
+          uri: lb://news-service/
+          predicates:
+            - Path=/bulletins/**
