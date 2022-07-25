@@ -20,9 +20,4 @@ spring:
           predicates:
             - Path=/auth/**
       globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
+        add-to-simple-url-handler-mapping: true
