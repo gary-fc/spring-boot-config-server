@@ -22,4 +22,8 @@ spring:
         - id: news-service
           uri: lb://news-service
           predicates:
+            - Path=/api/bulletins**
+        - id: news-service
+          uri: lb://news-service
+          predicates:
             - Path=/api/**
