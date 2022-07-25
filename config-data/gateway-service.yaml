@@ -15,11 +15,11 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: user-services
+        - id: user-service
           uri: lb://user-service
           predicates:
             - Path=/api/**
-        - id: user-services
+        - id: bulletin-service
             uri: lb://bulletin-service
             predicates:
               - Path=/api/**
